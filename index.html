@@ -33,8 +33,29 @@
                     </a>
                 </nav>
             </div>
-
         </aside>
+
+        <main class="flex-1 flex flex-col p-6 overflow-hidden relative">
+            <header class="flex justify-between items-center mb-6">
+                <div>
+                    <h2 class="text-2xl font-bold">Menu Category</h2>
+                    <p class="text-sm text-gray-300">Select your favorite food</p>
+                </div>
+                <div class="flex gap-4 items-center">
+                    <div class="relative">
+                        <i class="fa-solid fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                        <input type="text" placeholder="Search..." class="glass-input pl-10 pr-4 py-2 rounded-xl outline-none w-64 text-sm">
+                    </div>
+                    <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+                </div>
+            </header>
+
+            <div class="flex gap-4 overflow-x-auto pb-4 mb-2 no-scrollbar" id="category-container"></div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 overflow-y-auto pr-2 pb-20" id="product-grid"></div>
+        </main>
 
     <script src="assets/js/app.js"></script>
 </body>
