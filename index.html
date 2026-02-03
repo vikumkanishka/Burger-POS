@@ -57,6 +57,65 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 overflow-y-auto pr-2 pb-20" id="product-grid"></div>
         </main>
 
+        <div class="w-96 glass-panel border-l border-white/10 flex flex-col p-6 absolute right-0 top-0 h-full z-20 md:relative translate-x-full md:translate-x-0 transition-transform duration-300" id="cart-panel">
+            
+            <div class="mb-6">
+                <h3 class="font-bold mb-4">Customer Information</h3>
+                <div class="space-y-3">
+                    <input type="text" placeholder="Customer Name" class="glass-input w-full p-3 rounded-xl text-sm">
+                    <div class="flex gap-2">
+                        <input type="number" placeholder="Table No" class="glass-input w-1/2 p-3 rounded-xl text-sm">
+                        <div class="flex items-center gap-3 bg-black/20 p-2 rounded-xl w-1/2 justify-center border border-white/10">
+                            <button class="w-6 h-6 rounded-full bg-white/10 hover:bg-red-500 text-xs">-</button>
+                            <span>2</span>
+                            <button class="w-6 h-6 rounded-full bg-white/10 hover:bg-green-500 text-xs">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-1 flex flex-col min-h-0">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="font-bold">Current Order</h3>
+                    <button class="text-xs text-red-400 hover:text-red-300" onclick="clearCart()">Clear All</button>
+                </div>
+                
+                <div class="flex-1 overflow-y-auto space-y-3 pr-2" id="cart-items-container">
+                    </div>
+            </div>
+
+            <div class="mt-4 pt-4 border-t border-white/10 space-y-2 text-sm">
+                <div class="flex justify-between text-gray-300">
+                    <span>Subtotal</span>
+                    <span id="subtotal-price">$0.00</span>
+                </div>
+                <div class="flex justify-between text-gray-300">
+                    <span>Tax (10%)</span>
+                    <span id="tax-price">$0.00</span>
+                </div>
+                <div class="flex justify-between text-xl font-bold text-white mt-2">
+                    <span>Total</span>
+                    <span id="total-price">$0.00</span>
+                </div>
+
+                <div class="grid grid-cols-3 gap-2 mt-4">
+                    <button class="p-2 rounded-lg bg-red-500/20 border border-red-500 text-red-400 flex flex-col items-center gap-1 text-xs">
+                        <i class="fa-solid fa-money-bill"></i> Cash
+                    </button>
+                    <button class="p-2 rounded-lg bg-white/5 border border-white/10 text-gray-400 hover:bg-white/10 flex flex-col items-center gap-1 text-xs">
+                        <i class="fa-solid fa-credit-card"></i> Card
+                    </button>
+                    <button class="p-2 rounded-lg bg-white/5 border border-white/10 text-gray-400 hover:bg-white/10 flex flex-col items-center gap-1 text-xs">
+                        <i class="fa-solid fa-qrcode"></i> E-Wallet
+                    </button>
+                </div>
+
+                <button class="w-full bg-red-500 hover:bg-red-600 text-white py-3 rounded-xl shadow-lg shadow-red-500/40 font-bold mt-4 transition transform active:scale-95">
+                    Continue to Payment
+                </button>
+            </div>
+        </div>
+
     <script src="assets/js/app.js"></script>
 </body>
 </html>
