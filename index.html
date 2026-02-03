@@ -73,6 +73,47 @@
                     </div>
                 </div>
             </div>
+
+            <div class="flex-1 flex flex-col min-h-0">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="font-bold">Current Order</h3>
+                    <button class="text-xs text-red-400 hover:text-red-300" onclick="clearCart()">Clear All</button>
+                </div>
+                
+                <div class="flex-1 overflow-y-auto space-y-3 pr-2" id="cart-items-container">
+                    </div>
+            </div>
+
+            <div class="mt-4 pt-4 border-t border-white/10 space-y-2 text-sm">
+                <div class="flex justify-between text-gray-300">
+                    <span>Subtotal</span>
+                    <span id="subtotal-price">$0.00</span>
+                </div>
+                <div class="flex justify-between text-gray-300">
+                    <span>Tax (10%)</span>
+                    <span id="tax-price">$0.00</span>
+                </div>
+                <div class="flex justify-between text-xl font-bold text-white mt-2">
+                    <span>Total</span>
+                    <span id="total-price">$0.00</span>
+                </div>
+
+                <div class="grid grid-cols-3 gap-2 mt-4">
+                    <button class="p-2 rounded-lg bg-red-500/20 border border-red-500 text-red-400 flex flex-col items-center gap-1 text-xs">
+                        <i class="fa-solid fa-money-bill"></i> Cash
+                    </button>
+                    <button class="p-2 rounded-lg bg-white/5 border border-white/10 text-gray-400 hover:bg-white/10 flex flex-col items-center gap-1 text-xs">
+                        <i class="fa-solid fa-credit-card"></i> Card
+                    </button>
+                    <button class="p-2 rounded-lg bg-white/5 border border-white/10 text-gray-400 hover:bg-white/10 flex flex-col items-center gap-1 text-xs">
+                        <i class="fa-solid fa-qrcode"></i> E-Wallet
+                    </button>
+                </div>
+
+                <button class="w-full bg-red-500 hover:bg-red-600 text-white py-3 rounded-xl shadow-lg shadow-red-500/40 font-bold mt-4 transition transform active:scale-95">
+                    Continue to Payment
+                </button>
+            </div>
         </div>
 
     <script src="assets/js/app.js"></script>
