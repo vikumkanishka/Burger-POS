@@ -66,3 +66,5 @@ function clearCart() {
     cart = [];
     updateCart();
 }
+
+init();
