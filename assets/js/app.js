@@ -31,3 +31,24 @@ const cartContainer = document.getElementById('cart-items-container');
 const subtotalEl = document.getElementById('subtotal-price');
 const taxEl = document.getElementById('tax-price');
 const totalEl = document.getElementById('total-price');
+
+// Init
+function init() {
+    renderCategories();
+    renderProducts();
+    updateCart();
+}
+
+// Render Categories
+function renderCategories() {
+    categoryContainer.innerHTML = categories.map(cat => `
+        <button 
+            onclick="filterCategory('${cat.id}')"
+            class="category-btn flex flex-col items-center justify-center min-w-[90px] h-24 rounded-2xl bg-white shadow-sm cursor-pointer ${activeCategory === cat.id ? 'active' : 'text-gray-500'}">
+            <div class="bg-gray-100 p-2 rounded-full mb-2 ${activeCategory === cat.id ? 'bg-white/20' : ''}">
+                <i class="fa-solid ${cat.icon} text-xl"></i>
+            </div>
+            <span class="text-xs font-semibold">${cat.name}</span>
+        </button>
+    `).join('');
+}
