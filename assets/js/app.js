@@ -52,3 +52,12 @@ function renderCategories() {
         </button>
     `).join('');
 }
+
+// Cart Logic
+function addToCart(id) {
+    const product = products.find(p => p.id === id);
+    const existing = cart.find(item => item.id === id);
+    if(existing) existing.qty++;
+    else cart.push({...product, qty: 1});
+    updateCart();
+}
