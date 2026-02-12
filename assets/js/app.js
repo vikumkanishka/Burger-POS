@@ -61,3 +61,8 @@ function addToCart(id) {
     else cart.push({...product, qty: 1});
     updateCart();
 }
+
+function clearCart() {
+    cart = [];
+    updateCart();
+}
