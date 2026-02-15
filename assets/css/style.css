@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    --text-primary: #ececec;
+    --text-secondary: #e2e8f0;
+    --accent-color: #ff4757; /* Reddish pink from your design */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url("/assets/img/back-2.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: var(--text-primary);
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
