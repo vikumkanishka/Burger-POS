@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Burger-POS</title>
+    <title>GrillMaster POS - Glass Theme</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
+
 <body class="flex items-center justify-center p-4">
 
     <div class="glass-panel w-full h-full max-w-[1600px] flex overflow-hidden relative">
@@ -33,6 +35,7 @@
                     </a>
                 </nav>
             </div>
+
         </aside>
 
         <main class="flex-1 flex flex-col p-6 overflow-hidden relative">
@@ -52,9 +55,13 @@
                 </div>
             </header>
 
-            <div class="flex gap-4 overflow-x-auto pb-4 mb-2 no-scrollbar" id="category-container"></div>
+            
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 overflow-y-auto pr-2 pb-20" id="product-grid"></div>
+            <div class="flex gap-4 overflow-x-auto pb-4 mb-2 no-scrollbar" id="category-container">
+                </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 overflow-y-auto pr-2 pb-20" id="product-grid">
+                </div>
         </main>
 
         <div class="w-96 glass-panel border-l border-white/10 flex flex-col p-6 absolute right-0 top-0 h-full z-20 md:relative translate-x-full md:translate-x-0 transition-transform duration-300" id="cart-panel">
@@ -116,6 +123,8 @@
             </div>
         </div>
 
+    </div>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="assets/js/app.js"></script>
 </body>
 </html>
