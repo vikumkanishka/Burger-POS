@@ -18,3 +18,12 @@ body {
     height: 100vh;
     overflow: hidden;
 }
+/* The Core Glass Class - Apply this to panels */
+.glass-panel {
+    /* background: var(--glass-bg); */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    border-radius: 20px;
+}
