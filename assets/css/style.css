@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 :root {
@@ -18,6 +19,7 @@ body {
     height: 100vh;
     overflow: hidden;
 }
+
 /* The Core Glass Class - Apply this to panels */
 .glass-panel {
     /* background: var(--glass-bg); */
@@ -26,4 +28,47 @@ body {
     border: 1px solid var(--glass-border);
     box-shadow: var(--glass-shadow);
     border-radius: 20px;
+}
+
+/* Specific styling for the card elements to make them look like floating glass shards */
+.glass-card {
+    background: rgba(255, 255, 255, 0.05); /* Slightly more transparent */
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.glass-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+}
+
+/* Scrollbar styling to fit the theme */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+/* Selected Category Style */
+.category-active {
+    background: var(--accent-color) !important;
+    color: white !important;
+    border: none !important;
+}
+
+/* Inputs with glass effect */
+.glass-input {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.921);
+}
+.glass-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
 }
